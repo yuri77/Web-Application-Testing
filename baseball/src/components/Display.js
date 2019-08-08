@@ -1,12 +1,10 @@
 import React from "react";
 
-function Display({ ball }) {
+function Display({ ball, strike }) {
   return (
     <section className="display">
+      <div>strike:{strike}</div>
       <div>ball:{ball}</div>
-      {/* <div>strike:{props.strike}</div>
-      <div>foul:{props.foul}</div>
-      <div>hit:{props.hit}</div> */}
     </section>
   );
 }
