@@ -1,8 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import "@testing-library/react/cleanup-after-each";
-import { italic } from "ansi-colors";
+import Dashboard from "./Dashboard";
 
 describe("</Dashboard>", () => {
-  it("should add ball count on click", () => {});
+  it("it should render without crashing", () => {
+    const test = render(<Dashboard />);
+  });
 });
