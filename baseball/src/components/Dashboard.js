@@ -6,9 +6,9 @@ function Dashboard() {
   const [ball, setBall] = useState(0);
 
   const handleStrike = strike => {
-    if (strike < 3 && ball < 4) {
+    if (strike < 2 && ball < 4) {
       setStrike(strike + 1);
-    } else if (strike === 3) {
+    } else if (strike === 2) {
       setStrike(0);
       setBall(0);
 
@@ -16,9 +16,9 @@ function Dashboard() {
     }
   };
   const handleBall = ball => {
-    if (ball < 4 && strike < 3) {
+    if (ball < 3 && strike < 3) {
       setBall(ball + 1);
-    } else if (ball === 4) {
+    } else if (ball === 3) {
       setBall(0);
       setStrike(0);
     }
@@ -28,8 +28,12 @@ function Dashboard() {
     if (strike < 1) {
       setStrike(strike + 1);
     } else if (strike === 1) {
-      setStrike(strike + 2);
-    } else setStrike(strike);
+      setStrike(0);
+    } else if (strike <= 2) {
+      setStrike(strike);
+    } else {
+      setStrike(0);
+    }
   };
   const handleHit = () => {
     setStrike(0);
